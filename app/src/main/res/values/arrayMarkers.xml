@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="storeArray">
+        <item>ΘΕΣγάλα</item>
+        <item>Γρηγορίου Λαμπράκη και Καρανάσιου</item>
+        <item>Λειβαδάκι</item>
+        <item>Νεράϊδα</item>
+        <item>Αλεξανδρουπόλεως 31</item>
+        <item>Μανδηλαρά και Υψηλάντου</item>
+        <item>Καραθάνου και Ζαρμάνη</item>
+        <item>Χρυσοχόου και 25ης Μαρτίου</item>
+        <item>Γρηγορίου Ε΄</item>
+        <item>110 Πτέρυγα Μάχης</item>
+        <item>Στρατιά</item>
+        <item>Περιοχή ΟΣΕ</item>
+        <item>Βόλου</item>
+        <item>Σωκράτους</item>
+        <item>Αβέρωφ</item>
+    </string-array>
+
+</resources>
