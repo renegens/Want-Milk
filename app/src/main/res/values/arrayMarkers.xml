@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="storeArray">
-        <!--For Larisa -->
-        <item>Γαριβάλδι και Ολύμπου</item>
-        <item>Γρηγορίου Λαμπράκη και Καρανάσιου</item>
-        <item>Λειβαδάκι</item>
-        <item>Νεράϊδα</item>
-        <item>Αλεξανδρουπόλεως 31</item>
-        <item>Μανδηλαρά και Υψηλάντου</item>
-        <item>Καραθάνου και Ζαρμάνη</item>
-        <item>Χρυσοχόου και 25ης Μαρτίου</item>
-        <item>Γρηγορίου Ε΄</item>
-        <item>110 Πτέρυγα Μάχης</item>
-        <item>Στρατιά</item>
-        <item>Περιοχή ΟΣΕ</item>
-        <item>Βόλου</item>
-        <item>Σωκράτους</item>
-        <item>Αβέρωφ</item>
-        <!--For Thessaloniki -->
-        <item>Σβώλου</item>
-        <item>Αγ. Δημητρίου</item>
-        <item>Καλαμαριά</item>
-        <item>Νεάπολη - Συκίες</item>
-        <item>Άνω Τούμπα</item>
-        <item>Αμπελόκηποι</item>
-        <item>Κάτω Τούμπα Παπάφη κ Μπότσαρη</item>
-		<item>Θεαγένειο - Δελφών κ Μάντη Τειραισία</item>
-        <item>Χαριλάου Παπαναστασίου 126</item>
-        <item>Εύοσμος - Μεγ. Αλεξάνδρου κ Αλεξ. Παπάγου</item>
-
-    </string-array>
+	<string-array name="storeArray">
+		<!--For Larisa -->
+		<item>@string/one</item>
+		<item>@string/two</item>
+		<item>@string/three</item>
+		<item>@string/four</item>
+		<item>@string/five</item>
+		<item>@string/six</item>
+		<item>@string/seven</item>
+		<item>@string/eight</item>
+		<item>@string/nine</item>
+		<item>@string/ten</item>
+		<item>@string/eleven</item>
+		<item>@string/twelve</item>
+		<item>@string/thirteen</item>
+		<item>@string/fourteen</item>
+		<item>@string/fifteen</item>
+		<!--For Thessaloniki -->
+		<item>@string/sixteen</item>
+		<item>@string/seventeen</item>
+		<item>@string/eighteen</item>
+		<item>@string/nineteen</item>
+		<item>@string/twenty</item>
+		<item>@string/twentyone</item>
+		<item>@string/twentytwo</item>
+		<item>@string/twentythree</item>
+		<item>@string/twentyfour</item>
+		<item>@string/twentyfive</item>
+	</string-array>
 
 </resources>
+

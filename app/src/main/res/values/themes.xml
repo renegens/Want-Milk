@@ -2,7 +2,7 @@
 <resources>
     <style name="Theme.MyTheme" parent="Theme.AppCompat.Light">
         <!-- colorPrimary is used for the default action bar background -->
-        <item name="colorPrimary">@color/orange_700</item>
+        <item name="colorPrimary">@color/yellow_500</item>
 
         <!-- colorPrimaryDark is used for the status bar -->
         <item name="colorPrimaryDark">@color/blue_900</item>
