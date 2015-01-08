@@ -1,10 +1,13 @@
 package renegens.gotmilklocator;
 
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -21,13 +24,27 @@ public class MapsActivity extends FragmentActivity implements renegens.gotmilklo
 
     private LocationProvider mLocationProvider;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
-        //setSupportActionBar(toolbar);
+        ImageButton imageButton= (ImageButton) findViewById(R.id.imageButton);
+
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent browserIntent = new Intent(MapsActivity.this,Info.class);
+                startActivity(browserIntent);
+
+            }
+                });
+
 
         setUpMapIfNeeded();
 
