@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="storeArray">
-        <item>ΘΕΣγάλα</item>
+        <!--For Larisa -->
+        <item>Γαριβάλδι και Ολύμπου</item>
         <item>Γρηγορίου Λαμπράκη και Καρανάσιου</item>
         <item>Λειβαδάκι</item>
         <item>Νεράϊδα</item>
@@ -16,6 +17,17 @@
         <item>Βόλου</item>
         <item>Σωκράτους</item>
         <item>Αβέρωφ</item>
+        <!--For Thessaloniki -->
+        <item>Σβώλου</item>
+        <item>Αγ. Δημητρίου</item>
+        <item>Καλαμαριά</item>
+        <item>Νεάπολη - Συκίες</item>
+        <item>Άνω Τούμπα</item>
+        <item>Αμπελόκηποι</item>
+        <item>Κάτω Τούμπα Παπάφη κ Μπότσαρη</item>
+        <item>Χαριλάου Παπαναστασίου 126</item>
+        <item>Εύοσμος - Μεγ. Αλεξάνδρου κ Αλεξ. Παπάγου</item>
+
     </string-array>
 
 </resources>
