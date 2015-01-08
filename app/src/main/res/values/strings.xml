@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Got Milk Locator</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Got Milk Locator</string>
     <string name="title_activity_info">Info</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
