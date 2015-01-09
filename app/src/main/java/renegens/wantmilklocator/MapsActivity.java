@@ -1,10 +1,9 @@
-package renegens.gotmilklocator;
+package renegens.wantmilklocator;
 
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -16,7 +15,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements renegens.gotmilklocator.LocationProvider.LocationCallback {
+public class MapsActivity extends FragmentActivity implements renegens.wantmilklocator.LocationProvider.LocationCallback {
 
     public static final String TAG = MapsActivity.class.getSimpleName();
 
@@ -30,7 +29,7 @@ public class MapsActivity extends FragmentActivity implements renegens.gotmilklo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
         ImageButton imageButton= (ImageButton) findViewById(R.id.imageButton);
 
 

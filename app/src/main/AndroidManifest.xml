@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="renegens.gotmilklocator" >
+    package="renegens.wantmilklocator" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -26,7 +26,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="renegens.wantmilklocator.MapsActivity"
             android:label="@string/title_activity_maps" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,12 +35,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Info"
+            android:name="renegens.wantmilklocator.Info"
             android:label="@string/title_activity_info"
-            android:parentActivityName=".MapsActivity" >
+            android:parentActivityName="renegens.wantmilklocator.MapsActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="renegens.gotmilklocator.MapsActivity" />
+                android:value="renegens.wantmilklocator.MapsActivity" />
         </activity>
     </application>
 

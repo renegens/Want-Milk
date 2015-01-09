@@ -1,4 +1,4 @@
-package renegens.gotmilklocator;
+package renegens.wantmilklocator;
 
 import android.app.Activity;
 import android.content.Context;
@@ -49,7 +49,7 @@ public class LocationProvider implements
         mLocationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(10 * 1000)        // 10 seconds, in milliseconds
-                .setFastestInterval(1 * 1000); // 1 second, in milliseconds
+                .setFastestInterval(1000); // 1 second, in milliseconds the proper way is 1*1000 but will take shortcut
 
         mContext = context;
     }
