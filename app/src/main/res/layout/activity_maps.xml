@@ -18,25 +18,16 @@
             android:layout_gravity="left"
             android:src="@drawable/ic_launcher" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff"
-            android:id="@+id/textView" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:layout_marginRight="8dp"
-            android:layout_gravity="right"
-            android:background="@null"
-            android:src="@drawable/ic_action_name" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="@string/app_name"
+			android:textColor="#ffffff"
+			android:id="@+id/textView3"/>
 
 
-    </android.support.v7.widget.Toolbar>
+	</android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_below="@id/my_awesome_toolbar"
@@ -45,13 +36,30 @@
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:paddingBottom="8dp"
-        android:paddingTop="8dp">
+        android:paddingTop="8dp"
+		android:id="@+id/linearLayout">
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent" android:id="@+id/map" tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 </LinearLayout>
+
+	<ImageButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageButton"
+		android:layout_marginRight="24dp"
+		android:layout_gravity="right"
+		android:background="@null"
+		android:src="@drawable/ic_action_name"
+		android:layout_alignBottom="@+id/my_awesome_toolbar"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginEnd="24dp"
+		android:layout_marginBottom="19dp"/>
+
+
 
 
 </RelativeLayout>
