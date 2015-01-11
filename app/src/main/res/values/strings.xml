@@ -7,7 +7,7 @@
 <string name="title_activity_info">Info</string>
 <string name="action_settings">Settings</string>
 <string name="my_position">You are here! :)</string>
-<string name="info_text">This app is for displaying automated milk vending machines from ThesGala in Larisa and Thessaloniki</string>
+<string name="info_text">Find Milk Vending Machines closest to your current location, on a map, displaying stores in Larisa and Thessaloniki. Wherever you need fresh milk, just open the app and find the closest store and find them on a map with route descriptions and navigation instuctions.</string>
 <string name="one">Garibaldi kai Olympoy</string>
 <string name="two">Grigorioy Lampraki kai Karanasioy</string>
 <string name="three">Leibadaki</string>
@@ -34,6 +34,7 @@
 <string name="twentythree">THeageneio - Delfon k Manti Teiraisia</string>
 <string name="twentyfour">Xarilaoy Papanastasioy 126</string>
 <string name="twentyfive">Eyosmos - Meg. Alexandroy k Alex. Papagoy</string>
+    <string name="About">This app was made by Rene Gens and Designed by Minimal Zakk. I want to thank Barrack Obama, Antonis Samaras and Aleksandros Tsipras for being such wonderful leaders in these troubled times</string>
 
 
 </resources>
