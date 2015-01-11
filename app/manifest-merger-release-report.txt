@@ -64,7 +64,7 @@ ADDED from AndroidManifest.xml:24:9
 		ADDED from AndroidManifest.xml:26:13
 	android:name
 		ADDED from AndroidManifest.xml:25:13
-activity#renegens.gotmilklocator.MapsActivity
+activity#renegens.wantmilklocator.MapsActivity
 ADDED from AndroidManifest.xml:28:9
 	android:label
 		ADDED from AndroidManifest.xml:30:13
@@ -80,7 +80,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:34:17
 	android:name
 		ADDED from AndroidManifest.xml:34:27
-activity#renegens.gotmilklocator.Info
+activity#renegens.wantmilklocator.Info
 ADDED from AndroidManifest.xml:37:9
 	android:label
 		ADDED from AndroidManifest.xml:39:13
