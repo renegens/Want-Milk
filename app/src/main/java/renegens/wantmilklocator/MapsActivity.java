@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -110,10 +111,10 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
         LatLng latLng = new LatLng(currentLatitude, currentLongitude);
 
         //mMap.addMarker(new MarkerOptions().position(new LatLng(currentLatitude, currentLongitude)).title("Current Location"));
-        MarkerOptions options = new MarkerOptions()
-                .position(latLng)
-                .title(getResources().getString(R.string.my_position));
-        mMap.addMarker(options);
+//        MarkerOptions options = new MarkerOptions()
+//                .position(latLng)
+//                .title(getResources().getString(R.string.my_position));
+//        mMap.addMarker(options);
 
         /*Camera animation to location*/
 
@@ -126,7 +127,10 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
                 .tilt(40)                   // Sets the tilt of the camera to 30 degrees
                 .build();                   // Creates a CameraPosition from the builder
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-        mMap.addMarker(new MarkerOptions().position(latLng).title(getResources().getString(R.string.my_position)));
+
+        mMap.addMarker(new MarkerOptions().position(latLng).title(getResources().getString(R.string.my_position)).
+                icon(BitmapDescriptorFactory.fromResource(R.drawable.markercustom))).showInfoWindow();
+
     }
 
     //Setting up markers from array
