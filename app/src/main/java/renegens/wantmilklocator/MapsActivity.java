@@ -41,9 +41,8 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
                     22.950781, 22.94882, 22.948664, 22.948162, 22.977683, 22.923416, 22.969673, 22.96865, 22.958589, 22.902774};
 
     String[] arrayNames;
-    double closestMarkerX; //stores closest location
-    double closestMarkerY; //stores closest location
-    int newIndex; //for the double arrays
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +51,6 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
 
         //Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
-
 
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -145,19 +143,20 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
             Log.d("Method ", "index: " + index);
             Log.d("Method ", "result: " + result);
             Log.d("Method ", "min: " + min);
-
-
         }
-        closestMarkerX = gpsx[index];
-        closestMarkerY = gpsy[index];
-        newIndex = index;
-
+        double closestMarkerX = gpsx[index];
+        double closestMarkerY = gpsy[index];
+        int newIndex = index;
+        Marker closestMarker = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(gpsx[newIndex],gpsy[newIndex]))
+                .title(arrayNames[newIndex]));
+        closestMarker.showInfoWindow();
         Log.d("Debug", "Index: " + index);
         Log.d("Debug", "X: " + closestMarkerX);
         Log.d("Debug", "Y: " + closestMarkerY);
-
-
     }
+
+
 
 
     public double distFrom(double lat1, double lng1, double lat2, double lng2) {
@@ -180,44 +179,20 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
     }
 
 
-
-
-//        double earthRadius = 3958.75;
-//        double dLat = Math.toRadians(lat2-lat1);
-//        double dLng = Math.toRadians(lng2-lng1);
-//        double a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-//                Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) *
-//                        Math.sin(dLng/2) * Math.sin(dLng/2);
-//        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-//        double dist = earthRadius * c;
-//
-//        int meterConversion = 1609;
-//
-//        return new Float(dist * meterConversion).floatValue();
-
-
     public void handleNewLocation(Location location) {
         Log.d("New location request", location.toString());
 
         double currentLatitude = location.getLatitude();
         double currentLongitude = location.getLongitude();
         LatLng latLng = new LatLng(currentLatitude, currentLongitude);
-
         distanceCalculator(currentLatitude,currentLongitude);
-
-        //mMap.addMarker(new MarkerOptions().position(new LatLng(currentLatitude, currentLongitude)).title("Current Location"));
-//        MarkerOptions options = new MarkerOptions()
-//                .position(latLng)
-//                .title(getResources().getString(R.string.my_position));
-//        mMap.addMarker(options);
-
         /*Camera animation to location*/
 
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(latLng)             // Sets the center of the map to location user
-                .zoom(11)                   // Sets the zoom
+                .zoom(13)                   // Sets the zoom
                 .bearing(90)                // Sets the orientation of the camera to east
                 .tilt(40)                   // Sets the tilt of the camera to 30 degrees
                 .build();                   // Creates a CameraPosition from the builder
@@ -225,11 +200,6 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
 
         mMap.addMarker(new MarkerOptions().position(latLng).title(getResources().getString(R.string.my_position)).
                 icon(BitmapDescriptorFactory.fromResource(R.drawable.markercustom)));
-
-
-
-
-
     }
 
     //Setting up markers from array
@@ -240,14 +210,7 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
             double y = gpsy[i];
             MarkerOptions marker = new MarkerOptions().position(new LatLng(x, y)).title(arrayNames[i]);
             mMap.addMarker(marker);
-
-
-            Marker closestMarker = mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(closestMarkerX, closestMarkerY))
-                    .title(arrayNames[newIndex]));
-            closestMarker.showInfoWindow();
         }
-        Log.d("Debug", "NewIndexValue:" + newIndex);
 
     }
 
