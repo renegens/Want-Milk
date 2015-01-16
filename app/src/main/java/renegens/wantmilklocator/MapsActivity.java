@@ -25,6 +25,8 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
 
     private LocationProvider mLocationProvider;
 
+
+
     double[] gpsx =
             //For Larisa with pairs x and y and names from array with the same order
             {39.641180, 39.642052, 39.626034, 39.624953, 39.626297, 39.636028, 39.6366,
@@ -39,15 +41,9 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
                     22.950781, 22.94882, 22.948664, 22.948162, 22.977683, 22.923416, 22.969673, 22.96865, 22.958589, 22.902774};
 
     String[] arrayNames;
-
-
-    double xLongtitude; //stores current location
-    double yLatitude; // stores current location
-
     double closestMarkerX; //stores closest location
     double closestMarkerY; //stores closest location
     int newIndex; //for the double arrays
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +52,7 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
 
         //Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
+
 
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -126,57 +123,34 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
      */
     private void setUpMap() {
 
-        distanceCalculator();
+        //distanceCalculator();
         markerSetUp();
 
         //mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
 
+    public void distanceCalculator(double a, double b) {
 
-
-    public void distanceCalculator() {
-        double currentX = xLongtitude;
-        double currentY = yLatitude;
-        //double toCompareX = gpsx[0];
-        //double toCompareY = gpsy[0];
-        //double distance = distFrom(currentX,currentY,toCompareX,toCompareY);
-        double min = 500000000.00000;
-        int index = 0;
-
+        double min = 1000.000000;
+        int index = -1;
         //points to compare
-
         for (int i = 0; i < gpsx.length; i++) {
             double toCompareX = gpsx[i];
             double toCompareY = gpsy[i];
-
-            double result = distFrom(currentX, currentY, toCompareX, toCompareY);
-
-            if (result < min) {
+            double result = distFrom(a, b, toCompareX, toCompareY);
+            if (result <= min) {
                 min = result;
                 index = i;
             }
-            Log.d("Method ", "currentx: " + currentX);
-            Log.d("Method ", "currenty: " + currentY);
-            Log.d("Method ", "min: " + min);
+            Log.d("Method ", "index: " + index);
             Log.d("Method ", "result: " + result);
+            Log.d("Method ", "min: " + min);
+
 
         }
-
         closestMarkerX = gpsx[index];
         closestMarkerY = gpsy[index];
         newIndex = index;
-
-
-        //MarkerOptions marker = new MarkerOptions().position(new LatLng(closestMarkerX, closestMarkerY)).title("Closest");
-
-        //mMap.addMarker(marker);
-
-        //mMap.addMarker(new MarkerOptions().position(new LatLng(closestMarkerX, closestMarkerY).title(R.string()));
-
-        //MarkerOptions closestMarker = new MarkerOptions().position(new LatLng(closestMarkerX, closestMarkerY)).title(arrayNames[index]);
-
-        //mMap.addMarker(closestMarker).showInfoWindow();
-
 
         Log.d("Debug", "Index: " + index);
         Log.d("Debug", "X: " + closestMarkerX);
@@ -229,8 +203,7 @@ public class MapsActivity extends FragmentActivity implements renegens.wantmilkl
         double currentLongitude = location.getLongitude();
         LatLng latLng = new LatLng(currentLatitude, currentLongitude);
 
-        xLongtitude = currentLongitude;
-        yLatitude = currentLatitude;
+        distanceCalculator(currentLatitude,currentLongitude);
 
         //mMap.addMarker(new MarkerOptions().position(new LatLng(currentLatitude, currentLongitude)).title("Current Location"));
 //        MarkerOptions options = new MarkerOptions()
