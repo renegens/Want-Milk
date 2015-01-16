@@ -54,6 +54,7 @@ public class LocationProvider implements
         mContext = context;
     }
 
+
     public void connect() {
         mGoogleApiClient.connect();
     }
@@ -116,6 +117,7 @@ public class LocationProvider implements
     @Override
     public void onLocationChanged(Location location) {
         mLocationCallback.handleNewLocation(location);
+
     }
 }
 
