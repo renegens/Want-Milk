@@ -1,80 +1,121 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fab="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+				xmlns:fab="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
 
 
-    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/my_awesome_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="72dp">
+	<android.support.v7.widget.Toolbar
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/my_awesome_toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/colorPrimary"
+		android:minHeight="72dp">
 
-        <ImageButton
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:background="@null"
-            android:src="@drawable/ic_action_back" />
+		<ImageButton
+			android:id="@+id/imageView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:background="@null"
+			android:src="@drawable/ic_action_back"/>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-            android:text="@string/app_name"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff" />
+		<TextView
+			android:id="@+id/textView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="35dp"
+			android:text="@string/app_name"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffff"/>
 
 
-    </android.support.v7.widget.Toolbar>
+	</android.support.v7.widget.Toolbar>
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/my_awesome_toolbar">
 
-        <RelativeLayout
+	<ImageView
+		android:id="@+id/imageView2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scaleType="fitXY"
+		android:src="@drawable/infobackground"
+		android:layout_below="@+id/my_awesome_toolbar"
+		android:layout_alignRight="@+id/textView2"
+		android:layout_alignEnd="@+id/textView2"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"/>
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/infobackground"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/rating_text"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginBottom="210dp"
+		android:layout_marginLeft="30dp"
+		android:layout_toEndOf="@+id/playstore"/>
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_marginTop="15dip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/info_text"
-                android:layout_below="@+id/imageView2"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/playstore"
+		android:id="@+id/playstore"
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_marginTop="15dip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/textView2"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"/>
 
-                android:layout_below="@+id/textView2"
-                android:text="@string/About"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        </RelativeLayout>
-    </ScrollView>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="@string/ratelink"
+		android:id="@+id/idrate"
+		android:textColor="@color/blue_700"
+		android:layout_below="@+id/playstore"
+		android:layout_alignLeft="@+id/textView2"
+		android:layout_alignStart="@+id/textView2"
+		android:layout_marginTop="31dp"/>
 
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageView3"
+		android:layout_marginLeft="3dp"
+		android:layout_alignTop="@+id/idrate"
+		android:layout_toLeftOf="@+id/textView2"
+		android:layout_toStartOf="@+id/textView2"
+		android:layout_marginTop="63dp"
+		android:src="@drawable/shareicon"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_marginLeft="30dp"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="@string/Socialsharing"
+		android:id="@+id/textView4"
+		android:layout_alignTop="@+id/imageView3"
+		android:layout_toRightOf="@+id/imageView3"
+		android:layout_toEndOf="@+id/imageView3"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="@string/shareit"
+		android:id="@+id/shareit"
+		android:layout_below="@+id/textView4"
+		android:layout_alignLeft="@+id/textView4"
+		android:layout_alignStart="@+id/textView4"
+		android:layout_marginTop="22dp"
+		android:textColor="@color/blue_700"
+		android:linksClickable="false"/>
 
 </RelativeLayout>
 
