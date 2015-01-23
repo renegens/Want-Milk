@@ -7,7 +7,7 @@
 <string name="title_activity_info">Info</string>
 <string name="action_settings">Settings</string>
 <string name="my_position">Είσαι εδώ! :)</string>
-<string name="rating_text">Αν θέλετε μπορείτε να με υποστηρίξετε βαθμολογώντας την εφαρμογή στο Play Store. Χρειάζονται μόλις 20 δευτερόλεπτα και βοηθάει πολύ !</string>
+<string name="rating_text">Mπορείτε να με υποστηρίξετε βαθμολογώντας την εφαρμογή στο Play Store. Χρειάζονται μόλις 20 δευτερόλεπτα και βοηθάει πολύ!</string>
 <!--For Larisa -->
 <string name="one">Γαριβάλδι και Ολύμπου</string>
 <string name="two">Γρηγορίου Λαμπράκη και Καρανάσιου</string>
@@ -36,7 +36,7 @@
 <string name="twentyfour">Χαριλάου Παπαναστασίου 126</string>
 <string name="twentyfive">Εύοσμος - Μεγ. Αλεξάνδρου κ Αλεξ. Παπάγου</string>
     <string name="Socialsharing">Εαν σας αρέσει η εφαμοργή μοιραστείτε την στα Social Media, μπορεί να ενδιαφέρει και τους φίλους σας!</string>
-	<string name="ratelink">Βαθμολόγηση</string>
-	<string name="shareit">Κοινοποίηση</string>
+	<string name="ratelink">ΒΑΘΜΟΛΟΓΗΣΗ</string>
+	<string name="shareit">ΚΟΙΝΟΠΟΙΗΣΗ</string>
 
 </resources>
