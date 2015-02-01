@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Got-Milk-Locator.iml" filepath="$PROJECT_DIR$/Got-Milk-Locator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Want-Milk.iml" filepath="$PROJECT_DIR$/Want-Milk.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
